@@ -7,33 +7,27 @@
     <title>Age Calculator</title>
 </head>
 
-<style>
-    .container{
-        background: gainsboro;
-        padding: 20px;
-        display: flex;
-        justify-content: center;
-   
-    }
-    .btn{
-        margin-top: 10px;
-    }
+ <style>
+
     .footer{
-        background: wheat;
+        background: black;
         justify-content: center;
         align-items: center;
-       
+
     }
-  
-</style>
+	.btn{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+
+</style> 
 <body>
-
-
         <div class="container">
             <div class="row">
-                <div class="col-md-12" mainbody>
-                    <h3>Enter Your Age:</h3>
-                    <h3>Test:</h3>
+                <div class="col-md-12 mainbody" >
+                    <h3 class="text-center">Enter Your Age:</h3>
+                   
 	<form action="index.php" method="post">
 		<select name="day"  class="form-select">
 			<option value="01">01</option>
@@ -174,52 +168,44 @@
 			 <option value="1932">1932</option>
 			 <option value="1931">1931</option>
 			 <option value="1930">1930</option>
-		
-		
+
+
 		</select>
 
-		<input type="submit" name="submit" class="btn btn-primary" value="Calculate Age:">
-	</form>	
+		<input type="submit" name="submit" class="btn btn-primary text-center" value="Calculate Age:">
+	</form>
 
 		 <?php
-		if(isset($_POST['submit']))
-		{
+             if ( isset( $_POST['submit'] ) ) {
 
-		$d=$_POST['day'];
-		$m=$_POST['month'];
-		$y=$_POST['year']; 
-		$dob=$d."-".$m."-".$y;	 
-		$bday=new DateTime($dob); 
-		$t=date('d-m-Y');	
-		$age=$bday->diff(new DateTime);
-		$today=date('d-m-Y'); 
-		echo '<br />';
-		echo '<b>Your Birth date: </b>';
-		echo $dob;
-		echo '<br>';
-		echo '<b>Your Age : </b> ';
-		echo $age->y;
-		echo ' Years, ';
-		echo $age->m;
-		echo ' Months, ';
-		echo $age->d;
-		echo ' Days';
+                 $d     = $_POST['day'];
+                 $m     = $_POST['month'];
+                 $y     = $_POST['year'];
+                 $dob   = $d . "-" . $m . "-" . $y;
+                 $bday  = new DateTime( $dob );
+                 $t     = date( 'd-m-Y' );
+                 $age   = $bday->diff( new DateTime );
+                 $today = date( 'd-m-Y' );
+                 
+    $longText = <<<ABCD
+    <h4 class="text-center">Your Birth date: {$dob}</h1>
+    <br>
+    <h4 class="text-center">Your Age: {$age->y} Years: {$age->m} Months, {$age->d} Days</h1>
 
-		}
-		?>
+    ABCD;
+    echo $longText;
+
+             }
+         ?>
                 </div>
                 <div class="col-md-12 ">
                     <div class="foo">
                         <div class="container footer">
-                            <div class="row">
-                                <div class="col-md-12 ">     
-                                    <h1>Copyright 2023</h1>
-                                </div>                               
-                            </div>
+                           
                             <div class="row">
                                 <div class="col-md-12">
                                     <h1><a href="https://imtiazikbal.com/"><img src="https://shahbuildersbd.com/wp-content/uploads/2023/09/footerimtiaz-01.png" alt=""></a></h1>
-                                </div>       
+                                </div>
                             </div>
                         </div>
                     </div>
