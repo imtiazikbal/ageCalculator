@@ -19,6 +19,13 @@
         margin-top: 10px;
         margin-bottom: 10px;
     }
+	.btn2{
+		background: #0d6efd;
+		color: white;
+		padding: 10px;
+		text-transform: uppercase;
+		
+	}
 
 
 </style> 
@@ -26,7 +33,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 mainbody" >
-                    <h3 class="text-center">Enter Your Age:</h3>
+                    <h3 class="text-center btn2">Age Calculator By PHP</h3>
                    
 	<form action="index.php" method="post">
 		<select name="day"  class="form-select">
@@ -190,7 +197,7 @@
     $longText = <<<ABCD
     <h4 class="text-center">Your Birth date: {$dob}</h1>
     <br>
-    <h4 class="text-center">Your Age: {$age->y} Years: {$age->m} Months, {$age->d} Days</h1>
+    <h4 class="text-center">Your Age: {$age->y} Years, {$age->m} Months, {$age->d} Days</h1>
 
     ABCD;
     echo $longText;
