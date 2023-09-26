@@ -37,6 +37,7 @@
                    
 	<form action="index.php" method="post">
 		<select name="day"  class="form-select">
+			<option selected disabled value="">Enter Your Birth Day</option>
 			<option value="01">01</option>
 			<option value="02">02</option>
 			<option value="03">03</option>
@@ -70,6 +71,7 @@
 			<option value="31">31</option>
 		</select>
 		<select name="month"  class="form-select">
+		<option selected disabled value="">Enter Your Birth Month</option>
 			<option value="01">January</option>
 			<option value="02">February</option>
 			<option value="03">March</option>
@@ -84,6 +86,7 @@
 			<option value="12">December</option>
 		</select>
 		<select name="year"  class="form-select">
+		<option selected disabled value="">Enter Your Birth Year</option>
 			 <option value="2020">2020</option>
 			 <option value="2019">2019</option>
 			 <option value="2018">2018</option>
